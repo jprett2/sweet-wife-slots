@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <filter id="wild-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#3a1200" flood-opacity="0.5"/>
+    </filter>
+    <radialGradient id="wild-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff6c2" stop-opacity="0.95"/>
+      <stop offset="0.5" stop-color="#ffd84a" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#ffb000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wild-ray-long" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe23a"/>
+      <stop offset="1" stop-color="#ff9a00"/>
+    </linearGradient>
+    <linearGradient id="wild-ray-short" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff59a"/>
+      <stop offset="1" stop-color="#ffc400"/>
+    </linearGradient>
+    <radialGradient id="wild-sun" cx="0.42" cy="0.38" r="0.65">
+      <stop offset="0" stop-color="#fffbe0"/>
+      <stop offset="0.35" stop-color="#ffe04a"/>
+      <stop offset="0.8" stop-color="#ffaa00"/>
+      <stop offset="1" stop-color="#f07800"/>
+    </radialGradient>
+    <linearGradient id="wild-sea-back" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3f8ff0"/>
+      <stop offset="1" stop-color="#1446a8"/>
+    </linearGradient>
+    <linearGradient id="wild-sea-front" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1f5fc4"/>
+      <stop offset="0.6" stop-color="#0d3a94"/>
+      <stop offset="1" stop-color="#081f5c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- soft glow behind the sun -->
+  <circle cx="256" cy="250" r="215" fill="url(#wild-glow)"/>
+
+  <g filter="url(#wild-shadow)" stroke-linejoin="round" stroke-linecap="round">
+    <!-- rays -->
+    <path d="M160 229 L112 175 L183 190 ZM202 174 L199 102 L244 159 ZM268 159 L313 102 L310 174 ZM329 190 L400 175 L352 229 Z" fill="url(#wild-ray-short)" stroke="#8a3a00" stroke-width="9"/>
+    <path d="M157 274 L55 223 L169 210 ZM170 206 L125 102 L220 165 ZM223 163 L256 54 L289 163 ZM292 165 L387 102 L342 206 ZM343 210 L457 223 L355 274 Z" fill="url(#wild-ray-long)" stroke="#8a3a00" stroke-width="10"/>
+    <!-- sun -->
+    <circle cx="256" cy="258" r="112" fill="url(#wild-sun)" stroke="#8a3a00" stroke-width="12"/>
+  </g>
+  <!-- sun highlights -->
+  <path d="M184 222 C194 186 222 164 256 160 C232 176 214 198 206 230 C200 240 182 236 184 222 Z" fill="#ffffff" opacity="0.6"/>
+  <circle cx="226" cy="176" r="7" fill="#ffffff" opacity="0.55"/>
+
+  <g filter="url(#wild-shadow)" stroke="#06123a" stroke-width="12" stroke-linejoin="round">
+    <!-- back wave -->
+    <path d="M42 284 C62 256 96 254 116 272 C136 254 168 254 186 272 C206 254 238 254 256 272 C274 254 306 254 326 272 C344 254 376 254 396 272 C416 254 450 256 470 284 L470 320 L42 320 Z" fill="url(#wild-sea-back)"/>
+    <!-- front wave -->
+    <path d="M40 322 C44 300 64 294 76 304 C88 286 136 286 148 304 C160 286 208 286 220 304 C232 286 280 286 292 304 C304 286 352 286 364 304 C376 286 424 286 436 304 C448 294 468 300 472 322 L472 340 C472 352 462 358 448 358 L64 358 C50 358 40 352 40 340 Z" fill="url(#wild-sea-front)"/>
+  </g>
+
+  <!-- foam caps -->
+  <g fill="#ffffff">
+    <path d="M126 271 C140 260 162 260 176 271 C162 267 140 267 126 271 Z" opacity="0.7"/>
+    <path d="M196 271 C210 260 232 260 246 271 C232 267 210 267 196 271 Z" opacity="0.7"/>
+    <path d="M266 271 C280 260 302 260 316 271 C302 267 280 267 266 271 Z" opacity="0.7"/>
+    <path d="M336 271 C350 260 372 260 386 271 C372 267 350 267 336 271 Z" opacity="0.7"/>
+    <path d="M84 308 C98 293 126 293 140 308 C126 301 98 301 84 308 Z"/>
+    <path d="M156 308 C170 293 198 293 212 308 C198 301 170 301 156 308 Z"/>
+    <path d="M228 308 C242 293 270 293 284 308 C270 301 242 301 228 308 Z"/>
+    <path d="M300 308 C314 293 342 293 356 308 C342 301 314 301 300 308 Z"/>
+    <path d="M372 308 C386 293 414 293 428 308 C414 301 386 301 372 308 Z"/>
+  </g>
+  <!-- golden sun glitter on the water -->
+  <g stroke-linecap="round" fill="none">
+    <path d="M222 334 L290 334" stroke="#ffd23a" stroke-width="9"/>
+    <path d="M236 348 L276 348" stroke="#ffd23a" stroke-width="7" opacity="0.85"/>
+    <path d="M110 338 L140 338 M372 338 L402 338" stroke="#ffffff" stroke-width="6" opacity="0.45"/>
+  </g>
+</svg>
