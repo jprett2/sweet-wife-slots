@@ -1,6 +1,6 @@
 // Offline support for the phone edition. The deploy script stamps the build into the
 // cache name, so each deploy starts a fresh cache and the old one is deleted.
-const CACHE = 'sweet-wife-slots-20261018213714';
+const CACHE = 'sweet-wife-slots-20261018213853';
 
 self.addEventListener('install', () => self.skipWaiting());
 
